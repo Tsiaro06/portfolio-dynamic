@@ -20,7 +20,7 @@ export default function Portfolio() {
   const projectsRef = useRef<HTMLElement>(null)
   const contactRef = useRef<HTMLElement>(null)
 
-  const fullText = "Frontend & Backend Developer."
+  const fullText = "Fullstack Developer."
 
   // Typing effect
   useEffect(() => {
@@ -229,42 +229,53 @@ export default function Portfolio() {
       <section ref={heroRef} className="flex justify-center items-center min-h-screen">
         <div className="container hero-content">
           <div className="hero-text">
-            <h1 className="hero-title">
-              {typedText}
-              <span className="animate-pulse">|</span>
-            </h1>
-            <p className="hero-description">
-              I specialize in crafting immersive user experiences using the latest frontend technologies and frameworks
-              to bring your ideas to life. From dynamic user interfaces to interactive geospatial solutions, where I
-              find joy in harnessing the power of technology to solve and improve business insights.
-            </p>
+            <div className="about-grid">
+              <div className="profile-image-container">
+                <div className="profile-image-glow"></div>
+                <img src="/images/tsiaroo.png" alt="Lantofanambinana Tsiaro" className="profile-image" />
+              </div>
+              <div>
+                <h2 className="section-title">About Me</h2>
+                <div className="space-y-4">
+                  <p className="about-text">
+                    My name is <span className="highlight">LANTOFANAMBINANA Tsiaro</span>, I am 19 years old and currently
+                    studying Computer Science at the <span className="highlight-alt">National School of Informatics</span>
+                    . Passionate about digital technologies, I have a strong interest in web development, programming, and
+                    user interface design.
+                  </p>
+                  <p className="about-text">
+                    I enjoy working on projects that challenge me to learn new technologies, and I'm constantly exploring
+                    better ways to create customizable and sustainable software solutions. The following are tech stacks
+                    that I use regularly to build amazing products.
+                  </p>
+                </div>
 
-            {/* Animation Controls */}
-            <div className="button-group">
-              <button onClick={() => setIsAnimationPaused(!isAnimationPaused)} className="outline-button">
-                {isAnimationPaused ? "▶️ Play" : "⏯️ Pause"}
-              </button>
-              <button onClick={() => setAnimationSpeed(animationSpeed === 1 ? 0.5 : 1)} className="outline-button">
-                {animationSpeed === 1 ? "⚡ Speed" : "🐢 Speed"}
-              </button>
-            </div>
+                {/* Tech Stack Icons */}
+                <div className="tech-stack">
+                  {[
+                    { icon: "🌐", name: "HTML5" },
+                    { icon: "🎨", name: "CSS3" },
+                    { icon: "⚡", name: "JavaScript" },
+                    { icon: "🐘", name: "PHP" },
+                    { icon: "🗄️", name: "MySQL" },
+                    { icon: "🐘", name: "PostgreSQL" },
+                    { icon: "💚", name: "Vue.js" },
+                    { icon: "🐙", name: "GitHub" },
+                    { icon: "📝", name: "Git" },
+                  ].map((tech) => (
+                    <div key={tech.name} className="tech-item" title={tech.name}>
+                      <span>{tech.icon}</span>
+                    </div>
+                  ))}
+                </div>
 
-            <div className="button-group">
-              <button onClick={() => scrollToSection("contact")} className="primary-button">
-                Get In Touch
-              </button>
-              <button className="outline-button">Available for Hire</button>
+                <button className="mt-6 primary-button">Download Resume</button>
+              </div>
             </div>
           </div>
 
           {/* Tech System - Centré et plus bas */}
           <div className="tech-orbit-container">
-            {/* Panneau d'information Technologies */}
-            <div className="tech-info-panel">
-              <h3 className="tech-info-title">Technologies</h3>
-              <p className="tech-info-description">{techInfo[selectedTech as keyof typeof techInfo]}</p>
-            </div>
-
             <div className="tech-orbit-system">
               {/* Cercles concentriques */}
               <div className="orbit-circle orbit-circle-1"></div>
@@ -348,47 +359,73 @@ export default function Portfolio() {
       <section ref={aboutRef} className="py-20">
         <div className="container">
           <div className="about-grid">
-            <div className="profile-image-container">
-              <div className="profile-image-glow"></div>
-              <img src="/images/profile.png" alt="Lantofanambinana Tsiaro" className="profile-image" />
+            <div className="hero-text">
+              <h1 className="hero-title">
+                {typedText}
+                <span className="animate-pulse">|</span>
+              </h1>
+              <p className="hero-description">
+                I specialize in crafting immersive user experiences using the latest frontend technologies and frameworks
+                to bring your ideas to life. From dynamic user interfaces to interactive geospatial solutions, where I
+                find joy in harnessing the power of technology to solve and improve business insights.
+              </p>
+
+              {/* Animation Controls */}
+              <div className="button-group">
+                <button onClick={() => setIsAnimationPaused(!isAnimationPaused)} className="outline-button">
+                  {isAnimationPaused ? "▶️ Play" : "⏯️ Pause"}
+                </button>
+                <button onClick={() => setAnimationSpeed(animationSpeed === 1 ? 0.5 : 1)} className="outline-button">
+                  {animationSpeed === 1 ? "⚡ Speed" : "🐢 Speed"}
+                </button>
+              </div>
+
+              <div className="button-group">
+                <button onClick={() => scrollToSection("contact")} className="primary-button">
+                  Get In Touch
+                </button>
+                <button className="outline-button">Available for Hire</button>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div>
-              <h2 className="section-title">About Me</h2>
-              <div className="space-y-4">
-                <p className="about-text">
-                  My name is <span className="highlight">LANTOFANAMBINANA Tsiaro</span>, I am 19 years old and currently
-                  studying Computer Science at the <span className="highlight-alt">National School of Informatics</span>
-                  . Passionate about digital technologies, I have a strong interest in web development, programming, and
-                  user interface design.
-                </p>
-                <p className="about-text">
-                  I enjoy working on projects that challenge me to learn new technologies, and I'm constantly exploring
-                  better ways to create customizable and sustainable software solutions. The following are tech stacks
-                  that I use regularly to build amazing products.
-                </p>
-              </div>
-
-              {/* Tech Stack Icons */}
-              <div className="tech-stack">
-                {[
-                  { icon: "🌐", name: "HTML5" },
-                  { icon: "🎨", name: "CSS3" },
-                  { icon: "⚡", name: "JavaScript" },
-                  { icon: "🐘", name: "PHP" },
-                  { icon: "🗄️", name: "MySQL" },
-                  { icon: "🐘", name: "PostgreSQL" },
-                  { icon: "💚", name: "Vue.js" },
-                  { icon: "🐙", name: "GitHub" },
-                  { icon: "📝", name: "Git" },
-                ].map((tech) => (
-                  <div key={tech.name} className="tech-item" title={tech.name}>
-                    <span>{tech.icon}</span>
-                  </div>
-                ))}
-              </div>
-
-              <button className="mt-6 primary-button">Download Resume</button>
+      {/* Skills & Technologies Section */}
+      <section className="py-20 skills-technologies">
+        <div className="container">
+          <h2 className="mb-4 font-bold text-3xl text-center">Skills & Technologies</h2>
+          <p className="mb-8 text-gray-600 text-center">Tools and technologies I work with</p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <div className="skills-card frontend">
+              <h3 className="font-semibold text-gray-700 text-xl">Frontend</h3>
+              <p className="mb-2 text-gray-500 text-sm">User interface development</p>
+              <ul className="list-none">
+                <li className="text-gray-700 text-sm">React.js</li>
+                <li className="text-gray-700 text-sm">TypeScript</li>
+                <li className="text-gray-700 text-sm">Tailwind CSS</li>
+                <li className="text-gray-700 text-sm">Next.js</li>
+              </ul>
+            </div>
+            <div className="skills-card backend">
+              <h3 className="font-semibold text-gray-700 text-xl">Backend</h3>
+              <p className="mb-2 text-gray-500 text-sm">Server-side development</p>
+              <ul className="list-none">
+                <li className="text-gray-700 text-sm">Node.js</li>
+                <li className="text-gray-700 text-sm">Python</li>
+                <li className="text-gray-700 text-sm">PostgreSQL</li>
+                <li className="text-gray-700 text-sm">GraphQL</li>
+              </ul>
+            </div>
+            <div className="skills-card tools-devops">
+              <h3 className="font-semibold text-gray-700 text-xl">Tools & DevOps</h3>
+              <p className="mb-2 text-gray-500 text-sm">Development & deployment tools</p>
+              <ul className="list-none">
+                <li className="text-gray-700 text-sm">Git & GitHub</li>
+                <li className="text-gray-700 text-sm">Docker</li>
+                <li className="text-gray-700 text-sm">AWS</li>
+                <li className="text-gray-700 text-sm">Figma</li>
+              </ul>
             </div>
           </div>
         </div>

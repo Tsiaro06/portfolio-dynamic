@@ -1,5 +1,3 @@
-/* Remplacer tout le contenu par ce CSS */
-
 /* Base styles */
 * {
   margin: 0;
@@ -24,16 +22,16 @@ nav {
   top: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(8px);
+  /* backdrop-filter: blur(8px); */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 50;
 }
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0;
 }
 
 nav .container {
@@ -42,6 +40,8 @@ nav .container {
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .logo {
@@ -69,9 +69,9 @@ nav .container {
 .nav-link {
   position: relative;
   padding: 8px 16px;
-  border-radius: 80px; /* Augmenter le border-radius */
+  border-radius: 80px;
   transition: all 0.3s ease;
-  margin: 5px; /* Ajouter de l'espace entre les boutons */
+  margin: 5px;
   color: rgb(17, 18, 18);
   background-color: #65f0f3;
   right: 0px;
@@ -108,7 +108,7 @@ nav .container {
 
 /* Sections */
 section {
-  padding: 5rem 1.5rem;
+  padding: 30px 0; /* Réduit de 5rem (80px) à 30px pour environ 3cm */
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -132,12 +132,17 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
+}
+
+.hero-content .about-grid {
+  transform: translateX(-5%);
 }
 
 .hero-text {
   margin-bottom: 4rem;
+  margin-top: -100px;
 }
 
 .hero-title {
@@ -171,9 +176,92 @@ section {
 .hero-description {
   color: #d1d5db;
   margin-bottom: 1.5rem;
-  max-width: 600px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.about-grid .hero-text {
+  transform: translateX(5%);
+}
+
+/* Skills & Technologies Section */
+.skills-technologies {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: transparent;
+  color: #74f8ff;
+  margin-top: -200px;
+}
+
+.skills-technologies h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.skills-technologies p {
+  font-size: 1rem;
+  color: #24b65c;
+  margin-bottom: 2rem;
+}
+
+.skills-card {
+  display: inline-block;
+  width: 30%;
+  min-width: 250px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  margin: 0 1%;
+  vertical-align: top;
+  transition: transform 0.3s ease;
+  border-color: #74f8ff;
+}
+
+.skills-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #7fffe5;
+}
+
+.skills-card p {
+  font-size: 0.9rem;
+  color: #7be9ff;
+  margin-bottom: 1rem;
+}
+
+.skills-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-card li {
+  font-size: 0.9rem;
+  color: #c7cad0;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.skills-card li:before {
+  content: "•";
+  color: #4a5568;
+  position: absolute;
+  left: 0;
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .skills-card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 
 /* Tech orbit container */
@@ -192,7 +280,7 @@ section {
   top: -100px;
   left: -150px;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
+  /* backdrop-filter: blur(8px); */
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   padding: 1.5rem;
@@ -324,7 +412,7 @@ section {
   width: 3.5rem;
   height: 3.5rem;
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
+  /* backdrop-filter: blur(8px); */
   border: 2px solid rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   display: flex;
@@ -356,7 +444,7 @@ section {
   font-weight: 600;
   color: #d1d5db;
   background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
+  /* backdrop-filter: blur(4px); */
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -470,6 +558,8 @@ section {
   grid-template-columns: 1fr;
   gap: 3rem;
   align-items: center;
+  margin-top: 150px;
+
 }
 
 @media (min-width: 1024px) {
@@ -485,6 +575,7 @@ section {
   margin: 0 auto;
   overflow: hidden;
   animation: fadeIn 1s ease-out;
+  border-radius: 50%;
 }
 
 @keyframes fadeIn {
@@ -573,7 +664,7 @@ section {
   width: 3rem;
   height: 3rem;
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
+  /* backdrop-filter: blur(4px); */
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -617,6 +708,29 @@ section {
   margin-bottom: 3rem;
 }
 
+.filter-buttons button {
+  transition: all 0.3s ease;
+  position: relative;
+  transform: scale(1); /* État normal */
+}
+
+/* Supprimez ou commentez l'effet hover si vous voulez */
+/* .filter-buttons button:hover {
+  transform: translateY(-2px);
+} */
+
+/* Nouveau : bouton actif s'agrandit */
+.filter-buttons button.active {
+  transform: scale(1.1); /* Agrandissement de 10% */
+  /* Ou pour plus d'effet : */
+  /* transform: scale(1.15) translateY(-2px); */
+}
+
+/* Les boutons non-actifs restent normaux */
+.filter-buttons button:not(.active) {
+  transform: scale(1);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -636,29 +750,40 @@ section {
 }
 
 .project-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.5rem;
-  padding: 1.5rem;
+  background-color: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 2rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  min-height: 28rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .project-card::before {
-  content: "";
+  content: '';
   position: absolute;
-  inset: 0;
-  border-radius: 0.5rem;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(6, 182, 212, 0.1));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+  pointer-events: none;
+  z-index: 1;
 }
 
-.project-card:hover::before {
-  opacity: 1;
+.project-card > * {
+  position: relative;
+  z-index: 2;
 }
 
 .project-card:hover {
@@ -785,15 +910,21 @@ section {
 
 .contact-form-card {
   background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   padding: 2rem;
   position: relative;
   overflow: hidden;
   animation: slideInFromRight 0.8s ease-out;
+  min-height: 32rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
 }
 
+.contact-form-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
 /* Animation d'apparition du formulaire */
 @keyframes slideInFromRight {
   from {
@@ -1073,6 +1204,7 @@ section {
 /* Indicateur de caractères pour textarea */
 .form-textarea-container {
   position: relative;
+  margin-top: -50px;
 }
 
 .char-counter {
@@ -1144,7 +1276,7 @@ section {
 
 /* Footer */
 footer {
-  padding: 2rem 1.5rem;
+  padding: 2rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
 }
@@ -1160,7 +1292,7 @@ footer {
   width: 3rem;
   height: 3rem;
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
+  /* backdrop-filter: blur(4px); */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1253,7 +1385,6 @@ footer {
 
 /* ===== ANIMATIONS AVANCÉES POUR LES BOUTONS ===== */
 
-/* Animation de base pour tous les boutons */
 button {
   position: relative;
   overflow: hidden;
@@ -1265,10 +1396,10 @@ button {
 /* Modifier les styles des boutons de contrôle */
 .button-group {
   display: flex;
-  gap: 1.5rem; /* Augmenter l'espacement entre les boutons */
+  gap: 1.5rem;
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem; /* Ajouter de l'espace entre les groupes de boutons */
-  justify-content: center; /* Centrer les boutons */
+  margin-bottom: 1.5rem;
+  justify-content: center;
 }
 
 /* Styles pour les boutons primaires */
@@ -1278,8 +1409,9 @@ button {
   overflow: hidden;
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
-  border-radius: 16px; /* Augmenter le border-radius */
-  padding: 0.85rem 1.75rem; /* Légèrement plus grand */
+  border-radius: 16px;
+  padding: 0.85rem 1.75rem;
+  margin-top: 25px;
 }
 
 .primary-button::before {
@@ -1315,8 +1447,8 @@ button {
   color: #10b981;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
-  border-radius: 16px; /* Augmenter le border-radius */
-  padding: 0.85rem 1.75rem; /* Légèrement plus grand */
+  border-radius: 16px;
+  padding: 0.85rem 1.75rem;
 }
 
 .outline-button::before {
@@ -1489,7 +1621,7 @@ button {
   }
 
   .hero-content {
-    padding: 0 1rem;
+    padding: 0;
   }
 
   .tech-orbit {
