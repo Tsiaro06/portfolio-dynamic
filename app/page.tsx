@@ -274,6 +274,15 @@ export default function Portfolio() {
             </div>
           </div>
 
+          <div className="button-group">
+                <button onClick={() => setIsAnimationPaused(!isAnimationPaused)} className="outline-button">
+                  {isAnimationPaused ? "▶️ Play" : "⏯️ Pause"}
+                </button>
+                <button onClick={() => setAnimationSpeed(animationSpeed === 1 ? 0.5 : 1)} className="outline-button">
+                  {animationSpeed === 1 ? "⚡ Speed" : "🐢 Speed"}
+                </button>
+              </div>
+
           {/* Tech System - Centré et plus bas */}
           <div className="tech-orbit-container">
             <div className="tech-orbit-system">
@@ -371,14 +380,7 @@ export default function Portfolio() {
               </p>
 
               {/* Animation Controls */}
-              <div className="button-group">
-                <button onClick={() => setIsAnimationPaused(!isAnimationPaused)} className="outline-button">
-                  {isAnimationPaused ? "▶️ Play" : "⏯️ Pause"}
-                </button>
-                <button onClick={() => setAnimationSpeed(animationSpeed === 1 ? 0.5 : 1)} className="outline-button">
-                  {animationSpeed === 1 ? "⚡ Speed" : "🐢 Speed"}
-                </button>
-              </div>
+              
 
               <div className="button-group">
                 <button onClick={() => scrollToSection("contact")} className="primary-button">

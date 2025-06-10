@@ -72,8 +72,8 @@ nav .container {
   border-radius: 80px;
   transition: all 0.3s ease;
   margin: 5px;
-  color: rgb(17, 18, 18);
-  background-color: #65f0f3;
+  color: rgb(106, 250, 255);
+  background-color: transparent;
   right: 0px;
 }
 
