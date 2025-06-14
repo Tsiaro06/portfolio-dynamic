@@ -53,6 +53,7 @@ nav .container {
   color: transparent;
   transition: all 0.3s ease;
   cursor: pointer;
+  margin-left: 130px;
 }
 
 .logo:hover {
@@ -638,6 +639,19 @@ section {
   margin-bottom: 1.5rem;
 }
 
+.about-me{
+  display: inline-block;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.8);
+  padding: 1.5rem;
+  margin: 0 1%;
+  vertical-align: top;
+  transition: transform 0.3s ease;
+  border-color: #74f8ff;
+  margin-top: 20px;
+}
+
 .about-text {
   color: #d1d5db;
   margin-bottom: 1rem;
@@ -894,16 +908,19 @@ section {
   background-clip: text;
   color: transparent;
   margin-bottom: 1rem;
+  margin-left: 200px;
 }
 
 .contact-subtitle {
   font-size: 1.25rem;
   color: #d1d5db;
   margin-bottom: 1.5rem;
+  margin-left: 20px;
 }
 
 .contact-text {
   color: #d1d5db;
+  margin-left: 20px;
 }
 
 /* ===== ANIMATIONS AVANCÉES POUR LE FORMULAIRE DE CONTACT ===== */
@@ -919,6 +936,7 @@ section {
   min-height: 32rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
   transition: all 0.3s ease;
+  margin-right: 10px;
 }
 
 .contact-form-card:hover {

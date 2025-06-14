@@ -94,34 +94,34 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: "Onari B Website",
+      title: "Gestion_pension_retraite",
       description:
         "Working closely with the CHORIS-B team, I collaborated to ensure that the website not only met but exceeded their expectations.",
-      category: "frontend",
+      category: "Backend",
       icon: "🌐",
-      tech: ["HTML", "CSS", "JS"],
+      tech: ["HTML", "CSS", "JS", "PHP"],
       demoLink: "#",
       codeLink: "#",
     },
     {
       id: 2,
-      title: "Google Earth Tweet Map",
+      title: "Gestions_Stocks",
       description:
         "Working closely with the CHORIS-B team, I collaborated to ensure that the website not only met but exceeded their expectations.",
-      category: "gis",
+      category: "frontend",
       icon: "🐦",
-      tech: ["Python", "API", "GIS"],
+      tech: ["PHP", "CSS", "JavaScript", "Vue.js"],
       demoLink: "#",
       codeLink: "#",
     },
     {
       id: 3,
-      title: "ArcGIS StoryMaps",
+      title: "Mon_Portfolio_Dynamique",
       description:
         "Methods in Spatial Analysis. Working closely with the CHORIS-B team, I collaborated to ensure that the website not only met but exceeded their expectations.",
-      category: "gis",
+      category: "frontend",
       icon: "📊",
-      tech: ["ArcGIS", "Analysis", "Story"],
+      tech: ["React.js", "HTML", "CSS"],
       demoLink: "#",
       codeLink: "#",
     },
@@ -234,7 +234,7 @@ export default function Portfolio() {
                 <div className="profile-image-glow"></div>
                 <img src="/images/tsiaroo.png" alt="Lantofanambinana Tsiaro" className="profile-image" />
               </div>
-              <div>
+              <div className="about-me">
                 <h2 className="section-title">About Me</h2>
                 <div className="space-y-4">
                   <p className="about-text">
@@ -404,19 +404,24 @@ export default function Portfolio() {
               <p className="mb-2 text-gray-500 text-sm">User interface development</p>
               <ul className="list-none">
                 <li className="text-gray-700 text-sm">React.js</li>
-                <li className="text-gray-700 text-sm">TypeScript</li>
+                <li className="text-gray-700 text-sm">Javascript</li>
                 <li className="text-gray-700 text-sm">Tailwind CSS</li>
-                <li className="text-gray-700 text-sm">Next.js</li>
+                <li className="text-gray-700 text-sm">HTML</li>
+                <li className="text-gray-700 text-sm">Boostrap CSS</li>
+                <li className="text-gray-700 text-sm">Vue.js</li>
               </ul>
             </div>
             <div className="skills-card backend">
               <h3 className="font-semibold text-gray-700 text-xl">Backend</h3>
               <p className="mb-2 text-gray-500 text-sm">Server-side development</p>
               <ul className="list-none">
-                <li className="text-gray-700 text-sm">Node.js</li>
+                <li className="text-gray-700 text-sm">PHP</li>
+                <li className="text-gray-700 text-sm">Java</li>
+                <li className="text-gray-700 text-sm">C++</li>
+                <li className="text-gray-700 text-sm">C#</li>
                 <li className="text-gray-700 text-sm">Python</li>
-                <li className="text-gray-700 text-sm">PostgreSQL</li>
-                <li className="text-gray-700 text-sm">GraphQL</li>
+                <li className="text-gray-700 text-sm">Postgresql</li>
+                <li className="text-gray-700 text-sm">MySQL</li>
               </ul>
             </div>
             <div className="skills-card tools-devops">
@@ -424,7 +429,7 @@ export default function Portfolio() {
               <p className="mb-2 text-gray-500 text-sm">Development & deployment tools</p>
               <ul className="list-none">
                 <li className="text-gray-700 text-sm">Git & GitHub</li>
-                <li className="text-gray-700 text-sm">Docker</li>
+                <li className="text-gray-700 text-sm">Canva</li>
                 <li className="text-gray-700 text-sm">AWS</li>
                 <li className="text-gray-700 text-sm">Figma</li>
               </ul>
@@ -444,7 +449,7 @@ export default function Portfolio() {
               {[
                 { id: "all", label: "All Projects" },
                 { id: "frontend", label: "Frontend" },
-                { id: "gis", label: "Geo Informatics" },
+                { id: "Backend", label: "Backend" },
               ].map((filter) => (
                 <button
                   key={filter.id}
@@ -495,9 +500,11 @@ export default function Portfolio() {
                 Let's discuss on something <span className="highlight">cool</span> together
               </p>
               <p className="contact-text">
-                I'm interested in freelance opportunities especially ambitious or large projects. However, if you have
-                other requests or questions, don't hesitate to contact me using the form.
-              </p>
+                I'm open to professional collaborations and new opprtunities that align with my expertise.
+              If you are seeking a dedicated and skilled individual to contribute to your project or team , 
+              I would be pleased to discuss how we might work together.
+              
+              Please feel free to get in touch to explore potential synergies.</p>
             </div>
 
             <div className="contact-form-card">
@@ -553,4 +560,4 @@ export default function Portfolio() {
       </footer>
     </div>
   )
-}
+} 
